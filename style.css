@@ -7,7 +7,7 @@
 }
 
 .navbar {
-    background: #221e1ebd;
+    background: #000000cc;
     /* font-weight: bold; */
     height: 60px;
     display: flex;
@@ -43,7 +43,8 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
-    padding-left: 50px;
+    font-weight: bold;
+    padding-left: 30px;
 }
 
 .navbar_menu {
@@ -96,4 +97,98 @@
 .navbar_links:hover{
     color: #fcb045;
     transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .nav_container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar_menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;    
+    }
+
+    .navbar_menu.active{
+        background: #221e1ebd;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5 ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 3rem;
+    }
+
+    #navbar_logo{
+        padding-left: 25px;
+    }
+
+    .navbar_toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3 ease-in-out;
+        background: #fff;
+        
+    }
+
+    .navbar_item{
+        width: 100%;
+    }
+
+    .navbar_links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar_btn{
+        padding-bottom: 2rem;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80ox;
+        height: 80px;
+        margin: 0;
+    }
+
+    #mobile_menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar_toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile_menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    #mobile_menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile_menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
