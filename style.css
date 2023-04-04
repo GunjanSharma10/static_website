@@ -192,3 +192,106 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+/* Hero Section */
+
+.hero{
+    background: #000000;
+    background: linear-gradient(to right, #161616,#000000);
+    padding: 200px;
+}
+
+.hero_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero_heading{
+    font-size: 100px;
+    padding: 25px;
+    color: #fff;
+}
+
+.hero_heading span{
+    background: #ee0979; 
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979); 
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    
+    /* convert box gradient to text gradient */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.hero_description{
+    font-size: 60px;
+    background: #da22ff;
+    background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
+    background: linear-gradient(to right, #8f0eff, #da22ff);
+    /* convert box gradient to text gradient */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.highlight{
+    border-bottom: 4px solid rgb(132,0,255);
+}
+
+@media screen and (max-width: 768px) {
+    .hero_heading{
+        font-size: 50px;
+    }
+    .hero_description{
+        font-size: 40px;
+    }
+}
+
+/* About Section */
+
+.main{
+    background-color: #131313;
+    padding: 10rem 0;
+}
+
+.main_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main_content{
+    color: #fff;
+    width: 100%;
+}
+
+.main_content h1{
+    font-size: 2rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 50%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
