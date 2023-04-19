@@ -1,5 +1,6 @@
 const menu = document.querySelector('#mobile_menu');
 const menuLinks = document.querySelector('.navbar_menu');
+const submit = document.querySelector('#submit');
 
 //display mobile menu
 const mobileMenu = () => {
@@ -46,7 +47,28 @@ const highlightMenu = () => {
 window.addEventListener('scroll',highlightMenu);
 window.addEventListener('click',highlightMenu);
 
+const saveLead = async() => {
 
+    let clientname = document.getElementById("uname").value;
+    let mobile = document.getElementById("contact").value;
+
+    let response = await fetch('http://localhost:8080/lead/getleads');
+
+    let response2 = await fetch('http://localhost:8080/lead/saveleads',{
+        method: 'POST',
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: clientname,
+            mobile: mobile
+        })
+    })
+    console.log(response);
+}
+
+submit.addEventListener('click', saveLead);
 
 
 
